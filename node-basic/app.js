@@ -1,11 +1,16 @@
-const { sum } = require("./helpers");
-const http = require("http");
+const fs = require('fs');
+const fileName = 'target.txt';
 
-const server = http.createServer((req, res) => {
-    res.end("Hello world form node.js")
-})
+const errHandler = (err) => console.log(err);
+const dataHandler = (data) => console.log(data.toString());
 
-server.listen(3000);
+fs.readFile(fileName, (err, data)=>{
+    if(err){
+        errHandler(err);
+    }
+    dataHandler(data);
+});
 
-const total = sum(10, 200);
-console.log("Total: " + total);
+console.log('Node.js Async programming');
+
+
