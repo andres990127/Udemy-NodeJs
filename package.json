@@ -1,0 +1,23 @@
+{
+  "name": "udemy-nodejs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon node-basic/app.js "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andres990127/Udemy-NodeJs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andres990127/Udemy-NodeJs/issues"
+  },
+  "homepage": "https://github.com/andres990127/Udemy-NodeJs#readme",
+  "dependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
