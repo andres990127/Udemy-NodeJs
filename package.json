@@ -2,9 +2,9 @@
   "name": "udemy-nodejs",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "dev": "nodemon node-basic/app.js "
+    "dev": "nodemon app.js "
   },
   "repository": {
     "type": "git",
@@ -18,7 +18,11 @@
   },
   "homepage": "https://github.com/andres990127/Udemy-NodeJs#readme",
   "dependencies": {
+    "body-parser": "^1.20.1",
+    "dotenv": "^16.0.3",
     "express": "^4.18.2",
+    "mongoose": "^6.8.0",
+    "morgan": "^1.10.0",
     "nodemon": "^2.0.20"
   }
 }
