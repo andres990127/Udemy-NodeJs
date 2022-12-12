@@ -3,6 +3,7 @@ const morgan = require('morgan');
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
 const bodyParser = require('body-parser');
+const expressValidator = require('express-validator');
 const postRoutes = require('./routes/post');
 
 dotenv.config();
@@ -16,6 +17,7 @@ const app = express();
 
 app.use(morgan('dev'));
 app.use(bodyParser.json());
+app.use(expressValidator());
 app.use('/', postRoutes);
 
 const port = process.env.PORT || 3030;
