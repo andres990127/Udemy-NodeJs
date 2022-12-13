@@ -1,9 +1,13 @@
 const Post = require('../models/post');
 
 const getPosts = (req,res) => {
-    res.json({
-        posts: [{title: "First Post"},{title: "Second Post"}]
-    });
+    Post.find().select("_id title body")
+    .then((posts)=>{
+        res.status(200).json({
+            post: posts
+        })
+    })
+    .catch(err => console.error(err));
 };
 
 const createPost = (req,res) => {
